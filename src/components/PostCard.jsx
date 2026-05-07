@@ -3,16 +3,12 @@ import { motion } from "framer-motion";
 import {
   HiArrowRight,
   HiCalendar,
-  HiClock,
-  HiEye,
-  HiHeart,
   HiTag,
 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 // Componente PostCard - Exibe um card de post individual
 const PostCard = ({ post }) => {
-  // Função para formatar a data no padrão brasileiro
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("pt-BR", {
       year: "numeric",
@@ -102,10 +98,10 @@ const PostCard = ({ post }) => {
         </div>
       )}
 
-      {/* Conteúdo inferior - apenas autor e estatísticas */}
+      {/* Conteúdo inferior - informações do post */}
       <div className="p-6 flex flex-col flex-1">
-        {/* Informações do Autor e Data */}
-        <div className="flex items-center justify-between mb-4">
+        {/* Informações do Autor */}
+        <div className="flex items-center mb-4">
           <div className="flex items-center space-x-3">
             {/* Avatar do Autor */}
             <div className="relative">
@@ -133,29 +129,8 @@ const PostCard = ({ post }) => {
               </time>
             </div>
           </div>
-
-          {/* Tempo de Leitura */}
-          <div className="flex items-center space-x-1.5 text-xs text-gray-500 bg-gray-50 px-2.5 py-1.5 rounded-full">
-            <HiClock className="w-3.5 h-3.5" />
-            <span className="font-medium">{post.readingTime} min</span>
-          </div>
         </div>
 
-        {/* Estatísticas */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
-          <div className="flex items-center space-x-4 text-sm text-gray-500">
-            {/* Contador de Visualizações */}
-            <div className="flex items-center space-x-1.5 hover:text-primary-600 transition-colors duration-200">
-              <HiEye className="w-4 h-4" />
-              <span className="font-medium">{post.views.toLocaleString()}</span>
-            </div>
-            {/* Contador de Likes */}
-            <div className="flex items-center space-x-1.5 hover:text-red-500 transition-colors duration-200">
-              <HiHeart className="w-4 h-4" />
-              <span className="font-medium">{post.likes}</span>
-            </div>
-          </div>
-        </div>
       </div>
     </motion.article>
   );

@@ -10,7 +10,7 @@ const HomePage = ({ posts }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero Section */}
-      <Hero />
+      <Hero totalReflexoes={posts.length} />
 
       {/* Featured Posts Section */}
       <section className="py-16 lg:py-24 relative">

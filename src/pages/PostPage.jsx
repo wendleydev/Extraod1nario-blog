@@ -5,9 +5,6 @@ import {
   HiBookmark,
   HiCalendar,
   HiChevronDown,
-  HiClock,
-  HiEye,
-  HiHeart,
   HiShare,
   HiTag,
 } from "react-icons/hi";
@@ -44,7 +41,6 @@ const PostPage = ({ posts }) => {
     );
   }
 
-  // Função para formatar a data
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("pt-BR", {
       year: "numeric",
@@ -133,9 +129,8 @@ const PostPage = ({ posts }) => {
                 </div>
               </div>
 
-              {/* Estatísticas */}
+              {/* Informações complementares */}
               <div className="flex items-center space-x-4">
-                {/* Data */}
                 <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
                   <div className="p-2 bg-orange-500/20 rounded-lg">
                     <HiCalendar className="w-4 h-4 text-orange-300" />
@@ -148,44 +143,6 @@ const PostPage = ({ posts }) => {
                   </div>
                 </div>
 
-                {/* Tempo de Leitura */}
-                <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <HiClock className="w-4 h-4 text-blue-300" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/70">Leitura</div>
-                    <div className="font-semibold text-white text-sm">
-                      {post.readingTime} min
-                    </div>
-                  </div>
-                </div>
-
-                {/* Visualizações */}
-                <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
-                  <div className="p-2 bg-green-500/20 rounded-lg">
-                    <HiEye className="w-4 h-4 text-green-300" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/70">Visualizações</div>
-                    <div className="font-semibold text-white text-sm">
-                      {post.views.toLocaleString()}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Likes */}
-                <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
-                  <div className="p-2 bg-red-500/20 rounded-lg">
-                    <HiHeart className="w-4 h-4 text-red-300" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/70">Curtidas</div>
-                    <div className="font-semibold text-white text-sm">
-                      {post.likes}
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -480,11 +437,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 8 de março de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -742,11 +694,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 2 de março de 2018
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -1000,11 +947,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 14 de fevereiro de 2024
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -1255,11 +1197,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 7 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -1510,11 +1447,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 7 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -1707,11 +1639,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 7 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -1962,11 +1889,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 8 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -2162,11 +2084,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 8 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -2370,11 +2287,6 @@ const PostPage = ({ posts }) => {
                               </motion.span>
                             </div>
 
-                            <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30 shadow-xl">
-                              <p className="text-white/90 text-sm font-medium drop-shadow-lg">
-                                Publicado em 8 de agosto de 2025
-                              </p>
-                            </div>
                           </div>
                         </div>
                       </motion.div>
@@ -2434,21 +2346,6 @@ const PostPage = ({ posts }) => {
                     </div>
                   </div>
 
-                  {/* Estatísticas */}
-                  <div className="flex items-center space-x-4 text-sm text-gray-600">
-                    <div className="flex items-center space-x-1">
-                      <HiEye className="w-4 h-4 text-orange-500" />
-                      <span>{post.views.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <HiHeart className="w-4 h-4 text-red-500" />
-                      <span>{post.likes}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <HiClock className="w-4 h-4 text-blue-500" />
-                      <span>{post.readingTime} min</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>

@@ -4,7 +4,7 @@ import { HiArrowDown, HiPlay } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 // Componente Hero - Seção principal da página inicial
-const Hero = () => {
+const Hero = ({ totalReflexoes = 0 }) => {
   // Função para rolar para a seção de posts
   const scrollToPosts = () => {
     const postsSection = document.querySelector("section");
@@ -93,30 +93,18 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Estatísticas */}
+        {/* Total de reflexões disponíveis */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24"
+          className="grid grid-cols-1 gap-8 mb-24 max-w-md mx-auto"
         >
           <motion.div whileHover={{ scale: 1.05 }} className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-              3+
+              {totalReflexoes}
             </div>
-            <div className="text-white/80">Reflexões Publicadas</div>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-              0+
-            </div>
-            <div className="text-white/80">Leitores Mensais</div>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-              98%
-            </div>
-            <div className="text-white/80">Satisfação dos Leitores</div>
+            <div className="text-white/80">Reflexões Disponíveis</div>
           </motion.div>
         </motion.div>
       </div>

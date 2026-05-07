@@ -7,8 +7,11 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import PageTransition from "./components/PageTransition";
 import ScrollToTop from "./components/ScrollToTop";
 import AllPostsPage from "./pages/AllPostsPage";
+import AboutPage from "./pages/AboutPage";
+import CategoryPage from "./pages/CategoryPage";
 import HomePage from "./pages/HomePage";
 import PostPage from "./pages/PostPage";
+import { buildCategoriesFromPosts } from "./utils/categories";
 
 // Dados mock dos posts
 const mockPosts = [
@@ -243,6 +246,7 @@ const mockPosts = [
 function App() {
   const [posts] = useState(mockPosts);
   const [isLoading, setIsLoading] = useState(true);
+  const categories = buildCategoriesFromPosts(posts);
 
   // Simular carregamento inicial
   useEffect(() => {
@@ -262,7 +266,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         {/* Header */}
-        <Header />
+        <Header categories={categories} />
 
         {/* Main Content */}
         <main className="flex-1">
@@ -271,12 +275,17 @@ function App() {
               <Route path="/" element={<HomePage posts={posts} />} />
               <Route path="/posts" element={<AllPostsPage posts={posts} />} />
               <Route path="/post/:slug" element={<PostPage posts={posts} />} />
+              <Route
+                path="/categoria/:slug"
+                element={<CategoryPage posts={posts} categories={categories} />}
+              />
+              <Route path="/sobre" element={<AboutPage />} />
             </Routes>
           </PageTransition>
         </main>
 
         {/* Footer */}
-        <Footer />
+        <Footer categories={categories} />
 
         {/* Scroll to Top Button */}
         <ScrollToTop />

@@ -3,14 +3,15 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import {
   HiHome,
   HiLink,
-  HiMail,
   HiTag,
   HiUser,
   HiViewList,
 } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 // Componente Footer - Rodapé do site
-const Footer = () => {
+const Footer = ({ categories = [] }) => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       {/* Padrão de Fundo */}
@@ -29,8 +30,12 @@ const Footer = () => {
             {/* Marca */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg hover:shadow-orange-200/50 transition-all duration-300">
-                  <span className="text-white font-bold text-lg">E</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center shadow-lg hover:shadow-gray-400/40 transition-all duration-300">
+                  <img
+                    src={logo}
+                    alt="Logo Extraord1nário"
+                    className="w-7 h-7 object-contain"
+                  />
                 </div>
                 <span className="text-xl font-medium title-poppins">
                   Extraord1nário
@@ -44,20 +49,20 @@ const Footer = () => {
               {/* Links de Redes Sociais */}
               <div className="flex space-x-4">
                 <a
-                  href="https://facebook.com/Wendlley007"
+                  href="https://www.facebook.com/share/1aHBSGkHmn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 transform hover:scale-110"
+                  className="group w-10 h-10 bg-[#1877F2] border border-[#1877F2] rounded-xl flex items-center justify-center hover:bg-[#166FE5] hover:border-[#166FE5] transition-all duration-300 transform hover:scale-110"
                 >
-                  <FaFacebook className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                  <FaFacebook className="w-5 h-5 text-white transition-colors duration-300" />
                 </a>
                 <a
                   href="https://instagram.com/wendlley"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 hover:border-pink-500 transition-all duration-300 transform hover:scale-110"
+                  className="group w-10 h-10 bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] border border-transparent rounded-xl flex items-center justify-center hover:brightness-110 transition-all duration-300 transform hover:scale-110"
                 >
-                  <FaInstagram className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                  <FaInstagram className="w-5 h-5 text-white transition-colors duration-300" />
                 </a>
               </div>
             </div>
@@ -70,40 +75,31 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="/"
+                  <Link
+                    to="/"
                     className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
                   >
                     <HiHome className="w-4 h-4 text-gray-300 group-hover:text-primary-400 group-hover:scale-110 transition-all duration-200" />
                     <span>Início</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/sobre"
+                  <Link
+                    to="/sobre"
                     className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
                   >
                     <HiUser className="w-4 h-4 text-gray-300 group-hover:text-primary-400 group-hover:scale-110 transition-all duration-200" />
                     <span>Sobre</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/categorias"
+                  <Link
+                    to="/posts"
                     className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
                   >
                     <HiViewList className="w-4 h-4 text-gray-300 group-hover:text-primary-400 group-hover:scale-110 transition-all duration-200" />
-                    <span>Categorias</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/contato"
-                    className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
-                  >
-                    <HiMail className="w-4 h-4 text-gray-300 group-hover:text-primary-400 group-hover:scale-110 transition-all duration-200" />
-                    <span>Contato</span>
-                  </a>
+                    <span>Todas as Reflexões</span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -115,50 +111,24 @@ const Footer = () => {
                 <span>Temas</span>
               </h3>
               <ul className="space-y-3">
-                <li>
-                  <a
-                    href="/categoria/reflexoes-pessoais"
-                    className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
-                  >
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                      💭
-                    </span>
-                    <span>Reflexões Pessoais</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/categoria/desenvolvimento-pessoal"
-                    className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
-                  >
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                      🌱
-                    </span>
-                    <span>Desenvolvimento Pessoal</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/categoria/experiencias-de-vida"
-                    className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
-                  >
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                      📖
-                    </span>
-                    <span>Experiências de Vida</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/categoria/pensamentos-filosoficos"
-                    className="group flex items-center space-x-2 text-gray-300 hover:text-primary-400 transition-colors duration-200"
-                  >
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                      🤔
-                    </span>
-                    <span>Pensamentos Filosóficos</span>
-                  </a>
-                </li>
+                {categories.map((category) => (
+                  <li key={category.slug}>
+                    <Link
+                      to={`/categoria/${category.slug}`}
+                      className="group flex items-center justify-between text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      <span className="flex items-center space-x-2">
+                        <span className="text-lg group-hover:scale-110 transition-transform duration-200">
+                          {category.icon}
+                        </span>
+                        <span>{category.name}</span>
+                      </span>
+                      <span className="text-xs text-gray-400 group-hover:text-primary-400">
+                        {category.count}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

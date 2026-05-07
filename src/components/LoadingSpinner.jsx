@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 // Componente LoadingSpinner - Spinner de carregamento com animações
 const LoadingSpinner = () => {
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center z-50">
+    <div className="fixed inset-0 z-[9999] grid place-items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Elementos de fundo */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-orange-100/50 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-20 w-40 h-40 bg-orange-200/30 rounded-full blur-3xl animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-orange-300/20 rounded-full blur-2xl animate-pulse delay-500" />
 
       {/* Spinner principal */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center">
         <motion.div
           className="w-16 h-16 border-4 border-orange-200 border-t-orange-500 rounded-full"
           animate={{ rotate: 360 }}
@@ -24,7 +24,7 @@ const LoadingSpinner = () => {
 
         {/* Texto de carregamento */}
         <motion.div
-          className="mt-6 text-center"
+          className="mt-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}

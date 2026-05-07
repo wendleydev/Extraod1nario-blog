@@ -6,16 +6,6 @@ import PostCard from "../components/PostCard";
 
 // Componente AllPostsPage - Página com todos os posts
 const AllPostsPage = ({ posts }) => {
-  // Função para formatar a data
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("pt-BR", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero Section com Banner */}
@@ -69,7 +59,7 @@ const AllPostsPage = ({ posts }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+              className="grid grid-cols-1 gap-8 max-w-sm mx-auto"
             >
               <div className="text-center group">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -78,30 +68,6 @@ const AllPostsPage = ({ posts }) => {
                   </div>
                   <div className="text-orange-100 text-sm font-medium">
                     Reflexões
-                  </div>
-                </div>
-              </div>
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {posts
-                      .reduce((total, post) => total + post.views, 0)
-                      .toLocaleString()}
-                  </div>
-                  <div className="text-orange-100 text-sm font-medium">
-                    Visualizações
-                  </div>
-                </div>
-              </div>
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {posts
-                      .reduce((total, post) => total + post.likes, 0)
-                      .toLocaleString()}
-                  </div>
-                  <div className="text-orange-100 text-sm font-medium">
-                    Curtidas
                   </div>
                 </div>
               </div>
