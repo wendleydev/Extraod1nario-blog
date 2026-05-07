@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { HiChevronDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { banner } from "../assets/staticImages";
 import PostCard from "../components/PostCard";
 
 // Componente AllPostsPage - Página com todos os posts
@@ -13,7 +14,7 @@ const AllPostsPage = ({ posts }) => {
         {/* Banner de Fundo */}
         <div className="absolute inset-0">
           <img
-            src="/src/assets/images/banner.webp"
+            src={banner}
             alt="Banner Extraord1nário"
             className="w-full h-full object-cover object-center"
             loading="eager"

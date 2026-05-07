@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { HiArrowDown, HiPlay } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { banner } from "../assets/staticImages";
 
 // Componente Hero - Seção principal da página inicial
 const Hero = ({ totalReflexoes = 0 }) => {
@@ -18,7 +19,7 @@ const Hero = ({ totalReflexoes = 0 }) => {
       {/* Imagem de Fundo */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/banner.webp"
+          src={banner}
           alt="Banner Extraord1nário"
           className="w-full h-full object-cover object-center"
           loading="eager"
