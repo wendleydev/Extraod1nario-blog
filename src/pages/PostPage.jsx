@@ -2,10 +2,9 @@
 import { motion } from "framer-motion";
 import {
   HiArrowLeft,
-  HiBookmark,
   HiCalendar,
   HiChevronDown,
-  HiShare,
+  HiLightBulb,
   HiTag,
 } from "react-icons/hi";
 import { Link, useParams } from "react-router-dom";
@@ -2291,6 +2290,271 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
                     </>
+                  ) : post.slug === "amar-antes-do-tocar" ? (
+                    <>
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="relative"
+                      >
+                        <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-rose-400 rounded-full" />
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                          Em um tempo em que tudo parece correr depressa demais,
+                          onde gestos viram impulso e encontros se desfazem no
+                          primeiro sopro, existe um tipo de amor que caminha na
+                          contramão.
+                        </p>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        className="relative my-12"
+                      >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 title-poppins mb-6 bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
+                          O jardim silencioso
+                        </h2>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                          <div className="lg:col-span-2 space-y-4">
+                            <p className="text-lg leading-relaxed">
+                              Um amor que nasce antes das mãos se encontrarem,
+                              antes que os lábios descubram qualquer
+                              proximidade. Um amor que reconhece a essência
+                              antes da pele.
+                            </p>
+                            <p className="text-lg leading-relaxed">
+                              Eu penso nisso como um jardim silencioso, onde a
+                              conexão germina aos poucos. Nas conversas que
+                              aquecem, mesmo ditas à distância. Nos olhares que,
+                              mesmo através de uma tela, parecem atravessar
+                              quilômetros. Nas risadas que chegam como um
+                              abraço. Nada disso precisa de toque, precisa
+                              apenas de verdade.
+                            </p>
+                          </div>
+
+                          <motion.aside
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.7 }}
+                            className="lg:col-span-1"
+                          >
+                            <div className="bg-gradient-to-br from-orange-50 to-rose-50/80 rounded-2xl p-6 border border-orange-200/50 shadow-lg h-full">
+                              <h3 className="text-lg font-semibold text-orange-900 mb-3 flex items-center">
+                                <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
+                                Reflexão do dia
+                              </h3>
+                              <p className="text-sm text-gray-700 leading-relaxed">
+                                A conexão emocional profunda ativa no cérebro
+                                regiões ligadas ao prazer e à segurança de
+                                forma semelhante ao toque — o vínculo pode
+                                florescer com palavras, presença e escuta, não
+                                só com proximidade física.
+                              </p>
+                            </div>
+                          </motion.aside>
+                        </div>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.75 }}
+                        className="my-12"
+                      >
+                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-rose-50/70 rounded-2xl p-8 border border-orange-200/50 shadow-lg">
+                          <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-orange-500 to-rose-500 rounded-full flex items-center justify-center">
+                            <span className="text-white text-lg font-bold">
+                              &quot;
+                            </span>
+                          </div>
+                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                            Eu te reconheço, mesmo antes de te ter nos braços.
+                          </p>
+                          <div className="mt-4 pt-4 border-t border-orange-200/50">
+                            <p className="text-sm text-orange-700 font-medium">
+                              — O reconhecimento da essência
+                            </p>
+                          </div>
+                        </blockquote>
+                      </motion.div>
+
+                      <p className="text-lg leading-relaxed">
+                        É uma chama que não depende do físico, mas do sentir.
+                        E é verdadeiro justamente porque é puro… porque escolhe
+                        a alma antes da pressa, o profundo antes do raso.
+                      </p>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.85 }}
+                        className="my-12"
+                      >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 title-poppins mb-6 bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
+                          Quando o mundo aposta no efêmero
+                        </h2>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                          <div>
+                            <p className="text-lg leading-relaxed mb-4">
+                              Quantas vezes o mundo nos engana com o efêmero? O
+                              toque pode iludir, o beijo pode prometer o que não
+                              sustenta… mas a alma, essa sim, sabe quando
+                              encontra repouso. Amar antes do físico é um ato de
+                              fé, é escolher o oceano inteiro, e não apenas a
+                              onda que passa.
+                            </p>
+                            <p className="text-lg leading-relaxed">
+                              É se encantar pela forma como alguém fala da vida
+                              com brilho nos olhos. Pela risada que cura
+                              pedaços que a gente nem lembrava que doíam. Pela
+                              sintonia que acontece sem esforço, mesmo a
+                              quilômetros de distância.
+                            </p>
+                          </div>
+
+                          <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 1 }}
+                            className="bg-gradient-to-br from-orange-50 to-amber-50/80 rounded-2xl p-6 border border-orange-200/50"
+                          >
+                            <h3 className="text-lg font-semibold text-orange-900 mb-4 flex items-center">
+                              <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
+                              Esse amor ensina
+                            </h3>
+                            <ul className="space-y-3">
+                              {[
+                                "Intimidade nasce da paciência e da escuta",
+                                "Esperar não é fraqueza — é maturidade afetiva",
+                                "O profundo vale mais que o instantâneo",
+                                "Distância física não apaga sintonia verdadeira",
+                              ].map((item, index) => (
+                                <motion.li
+                                  key={item}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{
+                                    duration: 0.4,
+                                    delay: 1.1 + index * 0.08,
+                                  }}
+                                  className="flex items-start space-x-3 text-gray-700"
+                                >
+                                  <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0" />
+                                  <span className="text-sm leading-relaxed">
+                                    {item}
+                                  </span>
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        </div>
+                      </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.15 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-amber-50 via-white to-rose-50 border-2 border-dashed border-amber-300/70 shadow-md">
+                          <h3 className="text-lg font-semibold text-amber-900 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-amber-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 leading-relaxed mb-4">
+                            Estudos em psicologia do relacionamento mostram que
+                            casais que constroem amizade e revelação emocional
+                            antes da intensidade física tendem a relatar maior
+                            satisfação e estabilidade — o vínculo prepara o
+                            terreno para a proximidade com mais segurança.
+                          </p>
+                          <p className="text-sm text-gray-600 leading-relaxed italic border-l-4 border-amber-400 pl-4">
+                            Platão já falava em almas que se reconhecem: às
+                            vezes o encontro verdadeiro acontece primeiro por
+                            dentro.
+                          </p>
+                        </div>
+                      </motion.div>
+
+                      <p className="text-lg leading-relaxed">
+                        E se esse amor for raro? Talvez seja por isso mesmo que
+                        ele é tão sagrado.
+                      </p>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.25 }}
+                        className="relative my-10"
+                      >
+                        <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-rose-400 rounded-full" />
+                        <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          Ele ensina que intimidade nasce da paciência, da
+                          escuta, da construção lenta e bonita. Esperar pelo
+                          toque não é fraqueza, é força. É maturidade. É
+                          carinho em estado puro.
+                        </p>
+                      </motion.div>
+
+                      <p className="text-lg leading-relaxed">
+                        E para quem já sentiu essa faísca espiritual, esse
+                        «acontecer» que a gente não controla, saiba: esse amor
+                        existe, sim. Ele pulsa, transforma, fortalece… mesmo
+                        antes de um único toque. 🎈
+                      </p>
+
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 1.35 }}
+                        className="my-16"
+                      >
+                        <div className="relative overflow-hidden rounded-3xl p-0 text-center shadow-2xl border-0">
+                          <div className="absolute inset-0 -m-8">
+                            <img
+                              src={post.featuredImage}
+                              alt={post.title}
+                              className="w-full h-full object-cover object-center"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-orange-900/35 to-gray-600/25 backdrop-blur-[2px]" />
+                          </div>
+
+                          <div className="absolute top-0 left-0 w-32 h-32 bg-orange-400/25 rounded-full blur-2xl animate-pulse" />
+                          <div className="absolute bottom-0 right-0 w-40 h-40 bg-rose-300/25 rounded-full blur-2xl animate-pulse" />
+
+                          <div className="relative z-10 p-8 md:p-12">
+                            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 title-poppins drop-shadow-xl">
+                              Alma antes da pressa
+                            </h3>
+                            <p className="text-white/95 text-lg mb-8 drop-shadow-xl leading-relaxed">
+                              O amor que escolhe o profundo — mesmo à distância
+                            </p>
+                            <div className="flex justify-center space-x-6 mb-2">
+                              {[0, 0.5, 1].map((delay, index) => (
+                                <motion.span
+                                  key={`amar-balloon-${index}`}
+                                  className="text-3xl drop-shadow-xl"
+                                  animate={{ y: [0, -10, 0] }}
+                                  transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay,
+                                  }}
+                                >
+                                  🎈
+                                </motion.span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </>
                   ) : (
                     // Conteúdo padrão para outros posts
                     <div className="space-y-6">
@@ -2301,53 +2565,31 @@ const PostPage = ({ posts }) => {
               </div>
             </motion.article>
 
-            {/* Tags e Ações */}
+            {/* Tags */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-12"
             >
-              <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-2xl p-6 border border-orange-200/50">
-                {/* Tags */}
-                {post.tags.length > 0 && (
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4 title-poppins flex items-center">
-                      <HiTag className="w-5 h-5 mr-2 text-orange-600" />
-                      Tags Relacionadas
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-4 py-2 bg-white/80 backdrop-blur-sm text-orange-700 text-sm rounded-xl border border-orange-200/50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 shadow-sm"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
+              {post.tags.length > 0 && (
+                <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-2xl p-6 border border-orange-200/50">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 title-poppins flex items-center">
+                    <HiTag className="w-5 h-5 mr-2 text-orange-600" />
+                    Tags Relacionadas
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-4 py-2 bg-white/80 backdrop-blur-sm text-orange-700 text-sm rounded-xl border border-orange-200/50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 shadow-sm"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
                   </div>
-                )}
-
-                {/* Ações */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-orange-200/50">
-                  {/* Compartilhar */}
-                  <div className="flex items-center space-x-3">
-                    <span className="text-sm font-medium text-gray-700">
-                      Compartilhar:
-                    </span>
-                    <div className="flex space-x-2">
-                      <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg border border-orange-200/50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 shadow-sm">
-                        <HiShare className="w-4 h-4 text-orange-600" />
-                      </button>
-                      <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg border border-orange-200/50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 shadow-sm">
-                        <HiBookmark className="w-4 h-4 text-orange-600" />
-                      </button>
-                    </div>
-                  </div>
-
                 </div>
-              </div>
+              )}
             </motion.div>
 
             {/* Botão Voltar ao Início */}

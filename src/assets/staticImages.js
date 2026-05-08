@@ -9,6 +9,7 @@ import image8 from "./images/Fallbacks/image8.webp";
 import image9 from "./images/Fallbacks/image9.webp";
 import image13 from "./images/Fallbacks/image13.webp";
 import image14 from "./images/Fallbacks/image14.webp";
+import image16 from "./images/Fallbacks/image16.webp";
 
 export {
   avatar,
@@ -22,4 +23,5 @@ export {
   image9,
   image13,
   image14,
+  image16,
 };

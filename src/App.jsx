@@ -22,11 +22,49 @@ import {
   image9,
   image13,
   image14,
+  image16,
 } from "./assets/staticImages";
 import { buildCategoriesFromPosts } from "./utils/categories";
 
 // Dados mock dos posts
 const mockPosts = [
+  {
+    id: 10,
+    title: "Amar Antes do Tocar",
+    slug: "amar-antes-do-tocar",
+    excerpt:
+      "Um amor que reconhece a essência antes da pele — conexão à distância, verdade e o jardim silencioso onde a intimidade nasce sem pressa.",
+    content: `Em um tempo em que tudo parece correr depressa demais, onde gestos viram impulso e encontros se desfazem no primeiro sopro, existe um tipo de amor que caminha na contramão. Um amor que nasce antes das mãos se encontrarem, antes que os lábios descubram qualquer proximidade. Um amor que reconhece a essência antes da pele.
+
+Eu penso nisso como um jardim silencioso, onde a conexão germina aos poucos. Nas conversas que aquecem, mesmo ditas à distância. Nos olhares que, mesmo através de uma tela, parecem atravessar quilômetros. Nas risadas que chegam como um abraço. Nada disso precisa de toque, precisa apenas de verdade.
+
+É uma chama que não depende do físico, mas do sentir. É como se algo dentro do peito dissesse: "Eu te reconheço, mesmo antes de te ter nos braços."
+E é verdadeiro justamente porque é puro… porque escolhe a alma antes da pressa, o profundo antes do raso.
+
+Quantas vezes o mundo nos engana com o efêmero? O toque pode iludir, o beijo pode prometer o que não sustenta… mas a alma, essa sim, sabe quando encontra repouso. Amar antes do físico é um ato de fé, é escolher o oceano inteiro, e não apenas a onda que passa.
+
+É se encantar pela forma como alguém fala da vida com brilho nos olhos. Pela risada que cura pedaços que a gente nem lembrava que doíam. Pela sintonia que acontece sem esforço, mesmo a quilômetros de distância. E se esse amor for raro? Talvez seja por isso mesmo que ele é tão sagrado.
+
+Ele ensina que intimidade nasce da paciência, da escuta, da construção lenta e bonita. Esperar pelo toque não é fraqueza, é força. É maturidade. É carinho em estado puro.
+
+E para quem já sentiu essa faísca espiritual, esse "acontecer" que a gente não controla, saiba: esse amor existe, sim. Ele pulsa, transforma, fortalece… mesmo antes de um único toque. 🎈`,
+    featuredImage: image16,
+    category: "Reflexões Sociais",
+    publishedAt: "2026-05-07T12:00:00Z",
+    readingTime: 6,
+    views: 1240,
+    likes: 186,
+    tags: ["amor", "conexão", "intimidade", "distância", "alma"],
+    author: {
+      name: "Wendley Santos",
+      avatar: avatar,
+      bio: "Escritor e pensador apaixonado por reflexões profundas sobre a vida.",
+      social: {
+        facebook: "https://facebook.com/Wendlley007",
+        instagram: "https://instagram.com/wendlley",
+      },
+    },
+  },
   {
     id: 1,
     title: "Ser Mulher: A Força da Delicadeza",

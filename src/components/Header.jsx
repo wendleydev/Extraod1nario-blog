@@ -20,6 +20,8 @@ const Header = ({ categories = [] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
   const categoriesRef = useRef(null);
+  /** Inclui o acordeão de categorias no menu mobile (fora de categoriesRef do desktop). */
+  const mobileCategoriesRef = useRef(null);
 
   // Função para alternar menu mobile
   const toggleMenu = () => {
@@ -31,21 +33,24 @@ const Header = ({ categories = [] }) => {
     setIsCategoriesOpen(!isCategoriesOpen);
   };
 
-  // Fechar dropdown quando clicar fora dele
+  // Fechar dropdown quando clicar fora (desktop + mobile precisam estar no “inside”)
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        categoriesRef.current &&
-        !categoriesRef.current.contains(event.target)
-      ) {
+      const target = event.target;
+      const insideDesktop =
+        categoriesRef.current?.contains(target) ?? false;
+      const insideMobileCategories =
+        mobileCategoriesRef.current?.contains(target) ?? false;
+      if (!insideDesktop && !insideMobileCategories) {
         setIsCategoriesOpen(false);
       }
     };
 
     if (isCategoriesOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      // `click` evita fechar no mousedown antes do toque completar a navegação no mobile
+      document.addEventListener("click", handleClickOutside);
       return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener("click", handleClickOutside);
       };
     }
   }, [isCategoriesOpen]);
@@ -85,6 +90,7 @@ const Header = ({ categories = [] }) => {
             {/* Dropdown de Categorias */}
             <div className="relative" ref={categoriesRef}>
               <button
+                type="button"
                 onClick={toggleCategories}
                 className="group relative text-gray-700 hover:text-primary-600 transition-colors duration-200 font-normal flex items-center space-x-2"
               >
@@ -153,6 +159,7 @@ const Header = ({ categories = [] }) => {
           {/* Botão do Menu Mobile */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={toggleMenu}
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
               aria-label="Abrir menu"
@@ -181,8 +188,9 @@ const Header = ({ categories = [] }) => {
               </Link>
 
               {/* Categorias Mobile */}
-              <div>
+              <div ref={mobileCategoriesRef}>
                 <button
+                  type="button"
                   onClick={toggleCategories}
                   className="group flex items-center justify-between w-full text-gray-700 hover:text-primary-600 transition-colors duration-200 font-normal"
                 >
