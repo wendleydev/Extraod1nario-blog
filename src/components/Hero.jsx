@@ -54,7 +54,7 @@ const Hero = ({ totalReflexoes = 0 }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl text-white mb-6 title-poppins leading-tight"
+          className="text-3xl md:text-7xl text-white mb-6 title-poppins leading-tight"
         >
           <span className="bg-gradient-to-r from-white via-orange-100 to-white bg-clip-text text-transparent">
             Extraord1nário
