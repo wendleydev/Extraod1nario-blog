@@ -68,7 +68,7 @@ const Hero = ({ totalReflexoes = 0 }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          Una ota manera mysteriosa
+          Reflexões honestas sobre vida, amor e tudo o que nos torna humanos
         </motion.p>
 
         {/* Botões de Ação */}

@@ -8,6 +8,8 @@ import {
   HiTag,
 } from "react-icons/hi";
 import { Link, useParams } from "react-router-dom";
+import CharacteristicList from "../components/CharacteristicList";
+import { postCharacteristics } from "../data/postCharacteristics";
 
 // Componente PostPage - Página individual de post
 const PostPage = ({ posts }) => {
@@ -191,12 +193,12 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
-                          Ser mulher é caminhar na dúvida cheia de certezas, é
-                          correr atrás das nuvens num dia de sol e alcançar o
-                          sol num dia de chuva. Ser mulher é chorar de alegria e
-                          muitas vezes sorrir com tristeza, é cancelar sonhos em
-                          prol de terceiros, é acreditar quando ninguém mais
-                          acredita, é esperar quando ninguém mais espera.
+                          Escrevo sobre a mulher com admiração: ela caminha na
+                          dúvida cheia de certezas, corre atrás das nuvens num
+                          dia de sol e alcança o sol num dia de chuva. Chora de
+                          alegria e, muitas vezes, sorri com tristeza; adia
+                          sonhos em prol de terceiros, acredita quando ninguém
+                          mais acredita e espera quando ninguém mais espera.
                         </p>
                       </motion.div>
 
@@ -260,14 +262,13 @@ const PostPage = ({ posts }) => {
                             </span>
                           </div>
                           <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
-                            Ser mulher é ter a coragem de ser vulnerável e a
-                            força de se levantar sempre. É encontrar beleza na
-                            imperfeição e transformar desafios em oportunidades
-                            de crescimento.
+                            Quem observa de perto percebe: a força dela não
+                            está na ausência de medo, mas na coragem de
+                            enfrentá-lo com graça e determinação.
                           </p>
                           <div className="mt-4 pt-4 border-t border-pink-200/50">
                             <p className="text-sm text-pink-600 font-medium">
-                              — Reflexão sobre a Mulher
+                              — Wendley Santos
                             </p>
                           </div>
                         </blockquote>
@@ -314,33 +315,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
-                              Qualidades Únicas
+                              {postCharacteristics["ser-mulher-dia-internacional"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "A capacidade de amar incondicionalmente",
-                                "A força para enfrentar qualquer desafio",
-                                "A sabedoria de saber quando recuar e quando avançar",
-                                "A delicadeza de tocar vidas sem perceber",
-                                "A coragem de ser autêntica em um mundo que pede conformidade",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["ser-mulher-dia-internacional"].items}
+                              dotColor={postCharacteristics["ser-mulher-dia-internacional"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -355,10 +335,9 @@ const PostPage = ({ posts }) => {
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
                           <p className="text-lg leading-relaxed text-gray-700 pl-8">
-                            Parabéns a todas as delicadas, fortes, guerreiras,
-                            românticas… Mulheres! Que vocês continuem
-                            inspirando, transformando e iluminando o mundo com
-                            sua presença única e especial.
+                            Parabéns a todas as mulheres delicadas, fortes e
+                            guerreiras. Que continuem inspirando, transformando
+                            e iluminando o mundo com sua presença única.
                           </p>
                         </div>
                       </motion.div>
@@ -454,9 +433,9 @@ const PostPage = ({ posts }) => {
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
                           Creio que no fundo somos sempre sós. Pode ser que você
                           encontre um amor, um punhado de amigos, o conforto
-                          familiar. Mas ninguém te livra dos pesos da vida. A
-                          gente nasce e morre sozinho. E tudo bem, tudo bem, não
-                          tem drama nenhum nisso.
+                          familiar. Mas ninguém nos livra dos pesos da vida. A
+                          gente nasce e morre sozinho. E está tudo bem — não há
+                          drama nisso.
                         </p>
                       </motion.div>
 
@@ -519,13 +498,13 @@ const PostPage = ({ posts }) => {
                             </span>
                           </div>
                           <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
-                            A solidão não é uma punição, mas uma condição
-                            natural da alma. É no silêncio que encontramos nossa
-                            verdadeira essência.
+                            No fundo, somos sempre sós — e aceitar isso não é
+                            derrota. É o começo de uma paz que nenhuma
+                            companhia emprestada consegue dar.
                           </p>
                           <div className="mt-4 pt-4 border-t border-blue-200/50">
                             <p className="text-sm text-blue-600 font-medium">
-                              — Reflexão sobre a Solidão
+                              — Wendley Santos
                             </p>
                           </div>
                         </blockquote>
@@ -571,33 +550,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
-                              Benefícios da Solidão
+                              {postCharacteristics["solidao-essencial"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "A solidão nos permite conhecer nossa verdadeira essência",
-                                "É no silêncio que encontramos clareza e sabedoria",
-                                "Aceitar a solidão nos torna mais independentes",
-                                "A solidão nos ensina a valorizar verdadeiramente os outros",
-                                "É na solidão que nossa criatividade floresce",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["solidao-essencial"].items}
+                              dotColor={postCharacteristics["solidao-essencial"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -612,11 +570,10 @@ const PostPage = ({ posts }) => {
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 rounded-full" />
                           <p className="text-lg leading-relaxed text-gray-700 pl-8">
-                            E tudo bem, tudo bem, não tem drama nenhum nisso. A
-                            solidão não é tristeza, não é abandono, não é
-                            fracasso. É simplesmente a condição natural de ser
-                            humano. E quando aceitamos isso, descobrimos uma paz
-                            interior que nenhum relacionamento pode nos dar.
+                            A solidão não é tristeza, abandono ou fracasso. É
+                            simplesmente a condição natural de ser humano. E,
+                            quando aceitamos isso, descobrimos uma paz interior
+                            que nenhum relacionamento pode nos dar.
                           </p>
                         </div>
                       </motion.div>
@@ -730,10 +687,10 @@ const PostPage = ({ posts }) => {
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
-                            <p className="text-lg leading-relaxed">
-                              Talvez eu esqueça teu nome ou talvez queira teu
+                          <p className="text-lg leading-relaxed">
+                              Talvez eu esqueça seu nome ou talvez queira seu
                               sobrenome, amanhã ou quem sabe em agosto. Talvez
-                              eu te mande um áudio, com a voz trémula, estando
+                              eu te mande um áudio, com a voz trêmula, estando
                               nervoso. Talvez eu te mande mensagem e sorria até
                               tarde ou, quem sabe, até a hora do almoço.
                             </p>
@@ -787,11 +744,10 @@ const PostPage = ({ posts }) => {
                       </motion.div>
 
                       <p>
-                        Talvez eu reveja tuas fotos. Talvez eu durma um pouco
-                        mais tarde, desligue o alarme, te queira cada vez mais.
-                        Talvez amanhã faça sol, mas talvez até chova um pouco.
-                        Talvez o vento sopre forte, talvez eu ainda sinta teu
-                        gosto.
+                        Talvez eu reveja suas fotos. Talvez eu durma um pouco
+                        mais tarde, desligue o alarme e te queira cada vez
+                        mais. O amor, para mim, mora nesses pequenos talvez do
+                        cotidiano.
                       </p>
 
                       {/* Seção A Beleza dos Talvez */}
@@ -808,11 +764,11 @@ const PostPage = ({ posts }) => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                           <div>
                             <p className="text-lg leading-relaxed mb-6">
-                              Talvez eu queira muito estar ao teu lado, com a
-                              certeza de que ainda é pouco. Talvez eu queira teu
-                              sobrenome, talvez o número do teu telefone. Talvez
-                              o amor seja isso mesmo - uma sucessão de talvez
-                              que nos mantém vivos, esperançosos, sonhadores.
+                              Talvez eu queira muito estar ao seu lado, com a
+                              certeza de que ainda é pouco. Talvez eu queira seu
+                              sobrenome, talvez o número do seu telefone. Talvez
+                              o amor seja isso mesmo — uma sucessão de talvez
+                              que nos mantém vivos, esperançosos e sonhadores.
                             </p>
                           </div>
 
@@ -825,33 +781,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
-                              Os Talvez da Vida
+                              {postCharacteristics["talvez-amanha"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "Os talvez nos mantêm em movimento",
-                                "Cada talvez é uma possibilidade de felicidade",
-                                "O amor é feito de pequenos talvez cotidianos",
-                                "Talvez seja melhor não ter certezas absolutas",
-                                "Os talvez nos permitem sonhar e esperar",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["talvez-amanha"].items}
+                              dotColor={postCharacteristics["talvez-amanha"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -907,7 +842,8 @@ const PostPage = ({ posts }) => {
                             </div>
 
                             <p className="text-white/95 text-lg mb-8 drop-shadow-xl leading-relaxed">
-                              A beleza da vida está na incerteza dos talvez
+                              Viver sem saber tudo — e mesmo assim seguir em
+                              frente
                             </p>
 
                             <div className="flex justify-center space-x-6 mb-8">
@@ -963,9 +899,9 @@ const PostPage = ({ posts }) => {
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
                           Não me escondi e jamais desisti, mas se me afastei de
-                          ti num instante, foi só para que pudesses ser feliz.
-                          Amar te foi a coisa mais gratificante, e também a mais
-                          dolorosa que já fiz.
+                          você num instante, foi só para que pudesse ser feliz.
+                          Amar você foi a coisa mais gratificante — e também a
+                          mais dolorosa — que já fiz.
                         </p>
                       </motion.div>
 
@@ -984,9 +920,9 @@ const PostPage = ({ posts }) => {
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
                             <p className="text-lg leading-relaxed">
-                              E porque nos fazia-mos sorrir, E porque nos
-                              adorava-mos beijar, Não foi fácil deixar te
-                              partir, Muito menos será, deixar te de amar.
+                              E porque nos fazíamos sorrir, e porque nos
+                              adorávamos beijar, não foi fácil deixar você
+                              partir — muito menos será deixar de amar.
                             </p>
                           </div>
 
@@ -1026,7 +962,7 @@ const PostPage = ({ posts }) => {
                             </span>
                           </div>
                           <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
-                            Infelizmente, Amar.. É também ás vezes, ter que
+                            Infelizmente, amar é também, às vezes, ter que
                             deixar partir.
                           </p>
                           <div className="mt-4 pt-4 border-t border-orange-200/50">
@@ -1038,10 +974,10 @@ const PostPage = ({ posts }) => {
                       </motion.div>
 
                       <p>
-                        O amor verdadeiro às vezes exige que façamos escolhas
-                        difíceis. Deixar partir alguém que amamos pode ser a
-                        demonstração mais pura de amor - quando colocamos a
-                        felicidade do outro acima da nossa própria.
+                        Deixar partir alguém que amamos pode ser a demonstração
+                        mais pura de amor — quando colocamos a felicidade do
+                        outro acima da nossa própria, mesmo sabendo o preço que
+                        isso cobra.
                       </p>
 
                       {/* Seção A Dificuldade do Desapego */}
@@ -1074,33 +1010,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
-                              Lições do Amor
+                              {postCharacteristics["deixar-partir"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "O amor verdadeiro coloca o outro em primeiro lugar",
-                                "Deixar partir pode ser um ato de amor",
-                                "A dor do desapego é parte do crescimento",
-                                "Nem sempre ficar é a melhor opção",
-                                "O amor às vezes exige sacrifícios",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["deixar-partir"].items}
+                              dotColor={postCharacteristics["deixar-partir"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -1156,8 +1071,7 @@ const PostPage = ({ posts }) => {
                             </div>
 
                             <p className="text-white/95 text-lg mb-8 drop-shadow-xl leading-relaxed">
-                              O verdadeiro amor coloca a felicidade do outro
-                              acima da nossa própria
+                              Às vezes, soltar é a forma mais honesta de amar
                             </p>
 
                             <div className="flex justify-center space-x-6 mb-8">
@@ -1233,12 +1147,12 @@ const PostPage = ({ posts }) => {
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
                             <p className="text-lg leading-relaxed">
-                              As chatas te ligam de madrugada cobrando algo que
-                              você fez na semana passada, elas brigam contigo,
-                              olham feio para a mulherada que ta em volta de
-                              você, as chatas fazem cara feia, batem o pé, fazem
-                              bico, batem boca contigo sem pensar nas
-                              consequências e principalmente são ciumentas.
+                              As chamadas de "chatas" ligam de madrugada
+                              cobrando algo que você fez na semana passada;
+                              brigam com você, olham feio para as mulheres que
+                              estão em volta de você, fazem cara feia, batem o
+                              pé, fazem bico, discutem sem pensar nas
+                              consequências — e, principalmente, são ciumentas.
                             </p>
                           </div>
 
@@ -1289,9 +1203,10 @@ const PostPage = ({ posts }) => {
                       </motion.div>
 
                       <p>
-                        Uma mulher que não te procura ou não esta nem aí para
-                        você ou tem medo de te perder e prefere fingir que não
-                        viu ou ouviu nada não tem identidade!
+                        Uma mulher que não te procura ou não está nem aí para
+                        você, que tem medo de te perder e prefere fingir que não
+                        viu ou ouviu nada, perdeu a própria identidade no
+                        silêncio.
                       </p>
 
                       {/* Seção A Verdade Sobre as Chatas */}
@@ -1325,33 +1240,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
-                              Qualidades das "Chatas"
+                              {postCharacteristics["mulheres-chatas"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "As chatas demonstram interesse real",
-                                "Elas não têm medo de mostrar seus sentimentos",
-                                "Protegem você de situações ruins",
-                                "Não se importam com bens materiais",
-                                "Estão sempre ao seu lado",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["mulheres-chatas"].items}
+                              dotColor={postCharacteristics["mulheres-chatas"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -1407,7 +1301,7 @@ const PostPage = ({ posts }) => {
                             </div>
 
                             <p className="text-white/95 text-lg mb-8 drop-shadow-xl leading-relaxed">
-                              As "chatas" demonstram interesse real e proteção
+                              Quem cuida de verdade merece ser reconhecido
                             </p>
 
                             <div className="flex justify-center space-x-6 mb-8">
@@ -1483,10 +1377,10 @@ const PostPage = ({ posts }) => {
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
                             <p className="text-lg leading-relaxed">
-                              Cuida até cansar, até desanimar, até enjoar, mas
-                              cuida. Diz que ela fica ainda mais linda quando
-                              fica brava, fala garoto, fala pra ela. Valoriza
-                              enquanto você a tem nas mãos!
+                              Cuide até cansar, até desanimar, até enjoar — mas
+                              cuide. Diga que ela fica ainda mais linda quando
+                              fica brava; diga isso a ela. Valorize enquanto
+                              você a tem nas mãos.
                             </p>
                           </div>
 
@@ -1546,19 +1440,27 @@ const PostPage = ({ posts }) => {
                       </h2>
 
                       <p>
-                        Cuida bem do que te faz bem, cuida bem da tua garota,
-                        até ao final. Porque quando você encontrar alguém que
-                        permanece, que te conforta, que te apoia, você precisa
-                        valorizar e cuidar.
+                        Cuide bem do que te faz bem. Cuide bem dela, até o
+                        final. Porque quando você encontra alguém que permanece,
+                        que te conforta e que te apoia, precisa valorizar e
+                        cuidar.
                       </p>
 
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Nem todos permanecem nos momentos difíceis</li>
-                        <li>Quem fica merece ser valorizado</li>
-                        <li>O cuidado é uma demonstração de amor</li>
-                        <li>Valorize enquanto tem a chance</li>
-                        <li>Cuide até o final</li>
-                      </ul>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className="bg-gradient-to-br from-green-50 to-green-100/30 rounded-2xl p-6 border border-green-200/50 my-8"
+                      >
+                        <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mr-2" />
+                          {postCharacteristics["cuida-bem-dela"].title}
+                        </h3>
+                        <CharacteristicList
+                          items={postCharacteristics["cuida-bem-dela"].items}
+                          dotColor={postCharacteristics["cuida-bem-dela"].dotColor}
+                        />
+                      </motion.div>
 
                       <p>
                         Então, se você tem alguém especial que permaneceu ao seu
@@ -1594,7 +1496,7 @@ const PostPage = ({ posts }) => {
                           <div className="relative z-10 p-8 md:p-12">
                             <div className="mb-6">
                               <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 title-poppins drop-shadow-xl">
-                                Cuida bem da tua garota
+                                Cuida bem dela
                               </h3>
                             </div>
 
@@ -1655,9 +1557,8 @@ const PostPage = ({ posts }) => {
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
                           Eu quero sim casar com você, morar com você, acordar
-                          ao teu lado, ouvir você contar sobre seu dia, sair a
-                          noite de mãos dadas, encontrar com os amigos, curtir a
-                          noite.
+                          ao seu lado, ouvir você contar sobre o seu dia, sair
+                          à noite de mãos dadas.
                         </p>
                       </motion.div>
 
@@ -1676,10 +1577,10 @@ const PostPage = ({ posts }) => {
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
                             <p className="text-lg leading-relaxed">
-                              Correr em direção ao mar só pra te ver brilhar sob
+                              Correr em direção ao mar só para vê-la brilhar sob
                               a luz da lua, ouvir você suspirar que me ama, que
-                              me quer, sim, eu quero ficar vermelha quando você
-                              falar certas coisas.
+                              me quer — sim, eu quero ficar sem palavras quando
+                              você disser certas coisas.
                             </p>
                           </div>
 
@@ -1719,9 +1620,9 @@ const PostPage = ({ posts }) => {
                             </span>
                           </div>
                           <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
-                            Eu quero que você me cale com um beijo quando eu
-                            falar demais, quero te amar pelo resto da minha vida
-                            quero viver o resto da minha feliz ao teu lado.
+                            Quero que você me cale com um beijo quando eu falar
+                            demais. Quero te amar pelo resto da minha vida e
+                            viver feliz ao seu lado.
                           </p>
                           <div className="mt-4 pt-4 border-t border-pink-200/50">
                             <p className="text-sm text-pink-600 font-medium">
@@ -1732,8 +1633,8 @@ const PostPage = ({ posts }) => {
                       </motion.div>
 
                       <p>
-                        O casamento não é apenas uma cerimônia, é a escolha de
-                        construir uma vida juntos, de compartilhar momentos
+                        O casamento não é apenas uma cerimônia: é a escolha de
+                        construir uma vida a dois, de compartilhar momentos
                         simples e especiais, de crescer lado a lado.
                       </p>
 
@@ -1767,33 +1668,12 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
-                              Sonhos de Amor
+                              {postCharacteristics["eu-quero-casar-com-voce"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "Compartilhar a vida diária",
-                                "Construir sonhos juntos",
-                                "Apoiar-se mutuamente",
-                                "Crescer lado a lado",
-                                "Amar pelo resto da vida",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={index}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.4 + index * 0.1,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["eu-quero-casar-com-voce"].items}
+                              dotColor={postCharacteristics["eu-quero-casar-com-voce"].dotColor}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -1844,7 +1724,7 @@ const PostPage = ({ posts }) => {
                           <div className="relative z-10 p-8 md:p-12">
                             <div className="mb-6">
                               <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 title-poppins drop-shadow-xl">
-                                Quero viver feliz ao teu lado
+                                Quero viver feliz ao seu lado
                               </h3>
                             </div>
 
@@ -1905,8 +1785,8 @@ const PostPage = ({ posts }) => {
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 to-red-300 rounded-full" />
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
                           Preciso parar com os velhos hábitos, mas não me refiro
-                          à hábitos como o de morder a boca quando fico nervoso
-                          ou roer a unha quando fico com tédio.
+                          a hábitos como morder a boca quando fico nervoso ou
+                          roer a unha quando fico com tédio.
                         </p>
                       </motion.div>
 
@@ -1981,8 +1861,7 @@ const PostPage = ({ posts }) => {
 
                       <p>
                         Mas o que acontece quando os hábitos estão cravados
-                        dentro de sua alma? Err.. as vezes me sinto melhor
-                        sozinho...
+                        dentro da alma? Às vezes, me sinto melhor sozinho...
                       </p>
 
                       <h2 className="text-2xl font-semibold text-gray-900 title-poppins">
@@ -1996,13 +1875,21 @@ const PostPage = ({ posts }) => {
                         própria identidade e bem-estar.
                       </p>
 
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Autocuidado não é egoísmo</li>
-                        <li>Precisamos cuidar de nós mesmos</li>
-                        <li>Hábitos destrutivos nos machucam</li>
-                        <li>A solidão às vezes é necessária</li>
-                        <li>Mudança requer coragem</li>
-                      </ul>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className="bg-gradient-to-br from-red-50 to-red-100/30 rounded-2xl p-6 border border-red-200/50 my-8"
+                      >
+                        <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
+                          <div className="w-2 h-2 bg-red-500 rounded-full mr-2" />
+                          {postCharacteristics["habitos-destruidores"].title}
+                        </h3>
+                        <CharacteristicList
+                          items={postCharacteristics["habitos-destruidores"].items}
+                          dotColor={postCharacteristics["habitos-destruidores"].dotColor}
+                        />
+                      </motion.div>
 
                       <p>
                         E talvez seja necessário parar, refletir e mudar esses
@@ -2099,9 +1986,9 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 to-purple-400 rounded-full" />
                         <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
-                          ADEUS A INOCÊNCIA... Uma menina de 10 anos, violentada
-                          pelo tio por 4 anos, sofrendo calada todos os tipos de
-                          abusos possíveis.
+                          Adeus à inocência... Uma menina de dez anos, violentada
+                          pelo tio por quatro anos, sofrendo calada todos os
+                          tipos de abusos possíveis.
                         </p>
                       </motion.div>
 
@@ -2120,10 +2007,10 @@ const PostPage = ({ posts }) => {
                           {/* Conteúdo Principal */}
                           <div className="lg:col-span-2">
                             <p className="text-lg leading-relaxed">
-                              Não tendo ninguém, absolutamente ninguém que a
+                              Não tendo ninguém — absolutamente ninguém — que a
                               protegesse, que percebesse o que vinha ocorrendo
-                              com a mesma (ou até se tinha, mas é mais fácil
-                              fingir que nada acontece e proteger o abusador).
+                              com ela (ou até se tinha, mas é mais fácil fingir
+                              que nada aconteça e proteger o abusador).
                             </p>
                           </div>
 
@@ -2175,10 +2062,10 @@ const PostPage = ({ posts }) => {
                       </motion.div>
 
                       <p>
-                        E não o bastante dessa história horrenda... religiosos
-                        foram para a frente do hospital, protestar contra o
-                        procedimento, pois são a favor da vida.... que vida? A
-                        da criança violada?
+                        E não bastou essa história horrenda: religiosos foram
+                        à frente do hospital protestar contra o procedimento,
+                        pois são a favor da vida... Mas de qual vida? A da
+                        criança violada?
                       </p>
 
                       <h2 className="text-2xl font-semibold text-gray-900 title-poppins">
@@ -2187,31 +2074,39 @@ const PostPage = ({ posts }) => {
 
                       <p>
                         Que precisava de socorro e ninguém fez absolutamente
-                        NADA? Inacreditável como as pessoas são hipócritas e
-                        usam da religião para se esconder.... querer que uma
-                        criança de 10 anos, tenha o filho de seu ABUSADOR é
-                        crime, SIM!
+                        nada? Inacreditável como as pessoas são hipócritas e
+                        usam a religião para se esconder... Querer que uma
+                        criança de dez anos tenha o filho do seu abusador é
+                        crime — sim!
                       </p>
 
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>A proteção das crianças deve ser prioridade</li>
-                        <li>A religião não pode justificar atrocidades</li>
-                        <li>O silêncio é cúmplice da violência</li>
-                        <li>Precisamos falar sobre abuso infantil</li>
-                        <li>A justiça deve proteger os vulneráveis</li>
-                      </ul>
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1.2 }}
+                        className="bg-gradient-to-br from-purple-50 to-purple-100/30 rounded-2xl p-6 border border-purple-200/50 my-8"
+                      >
+                        <h3 className="text-lg font-semibold text-purple-800 mb-4 flex items-center">
+                          <div className="w-2 h-2 bg-purple-600 rounded-full mr-2" />
+                          {postCharacteristics["adeus-a-inocencia"].title}
+                        </h3>
+                        <CharacteristicList
+                          items={postCharacteristics["adeus-a-inocencia"].items}
+                          dotColor={postCharacteristics["adeus-a-inocencia"].dotColor}
+                        />
+                      </motion.div>
 
                       <p>
-                        Que esse procedimento seja feito o mais rápido possível,
-                        e ela receba todo apoio necessário, pois essa menina
-                        terá uma vida de traumas a serem superados, terá medo de
-                        todo tipo de HOMEM que se aproximar dela, não saberá em
-                        quem poderá confiar.
+                        Que esse procedimento seja feito o mais rápido possível
+                        e que ela receba todo o apoio necessário, pois essa
+                        menina terá uma vida de traumas a superar, terá medo de
+                        todo tipo de homem que se aproximar dela e não saberá
+                        em quem poderá confiar.
                       </p>
 
                       <p>
                         E as pessoas preocupadas com o feto, fruto de um crime
-                        desprezível. Realmente o ser humano NÃO deu certo!
+                        desprezível. Realmente, o ser humano não deu certo.
                       </p>
 
                       {/* Destaque Final */}
@@ -2345,7 +2240,7 @@ const PostPage = ({ posts }) => {
                             <div className="bg-gradient-to-br from-orange-50 to-rose-50/80 rounded-2xl p-6 border border-orange-200/50 shadow-lg h-full">
                               <h3 className="text-lg font-semibold text-orange-900 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
-                                Reflexão do dia
+                                Reflexão do Dia
                               </h3>
                               <p className="text-sm text-gray-700 leading-relaxed">
                                 A conexão emocional profunda ativa no cérebro
@@ -2425,32 +2320,13 @@ const PostPage = ({ posts }) => {
                           >
                             <h3 className="text-lg font-semibold text-orange-900 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
-                              Esse amor ensina
+                              {postCharacteristics["amar-antes-do-tocar"].title}
                             </h3>
-                            <ul className="space-y-3">
-                              {[
-                                "Intimidade nasce da paciência e da escuta",
-                                "Esperar não é fraqueza — é maturidade afetiva",
-                                "O profundo vale mais que o instantâneo",
-                                "Distância física não apaga sintonia verdadeira",
-                              ].map((item, index) => (
-                                <motion.li
-                                  key={item}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{
-                                    duration: 0.4,
-                                    delay: 1.1 + index * 0.08,
-                                  }}
-                                  className="flex items-start space-x-3 text-gray-700"
-                                >
-                                  <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0" />
-                                  <span className="text-sm leading-relaxed">
-                                    {item}
-                                  </span>
-                                </motion.li>
-                              ))}
-                            </ul>
+                            <CharacteristicList
+                              items={postCharacteristics["amar-antes-do-tocar"].items}
+                              dotColor={postCharacteristics["amar-antes-do-tocar"].dotColor}
+                              baseDelay={1.1}
+                            />
                           </motion.div>
                         </div>
                       </motion.div>
@@ -2494,10 +2370,9 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-rose-400 rounded-full" />
                         <p className="text-lg leading-relaxed text-gray-700 pl-8">
-                          Ele ensina que intimidade nasce da paciência, da
-                          escuta, da construção lenta e bonita. Esperar pelo
-                          toque não é fraqueza, é força. É maturidade. É
-                          carinho em estado puro.
+                          Ele ensina que intimidade nasce da escuta e da
+                          construção lenta. Esperar pelo toque não é fraqueza:
+                          é maturidade. É carinho em estado puro.
                         </p>
                       </motion.div>
 
