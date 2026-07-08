@@ -132,9 +132,9 @@ const Header = ({ categories = [] }) => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-3 w-88 max-w-[92vw] bg-white/95 dark:bg-gray-900/70 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/10 border border-orange-100 dark:border-white/10 overflow-hidden z-50"
+                    className="absolute top-full left-0 mt-3 w-88 max-w-[92vw] bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/10 border border-orange-100 dark:border-white/20 overflow-hidden z-50"
                   >
-                    <div className="px-4 py-3 border-b border-orange-100/70 dark:border-white/10 bg-gradient-to-r from-orange-50/70 to-white dark:from-gray-800/70 dark:to-gray-900">
+                    <div className="px-4 py-3 border-b border-orange-100/80 dark:border-white/20 bg-gradient-to-r from-orange-50/90 to-white dark:from-gray-800/90 dark:to-gray-900">
                       <h3 className="text-sm font-medium text-gray-900 dark:text-white title-poppins flex items-center space-x-2">
                         <HiViewGrid className="w-4 h-4 text-primary-500" />
                         <span className="text-gray-900 dark:text-white">Explore por Tema</span>

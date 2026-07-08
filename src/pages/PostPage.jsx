@@ -118,9 +118,9 @@ const PostPage = ({ posts }) => {
                   <img
                     src={post.author.avatar}
                     alt={post.author.name}
-                    className="w-14 h-14 rounded-full ring-2 ring-orange-400/50 shadow-lg"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full ring-2 ring-orange-400/50 shadow-lg"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-sm" />
+                  <div className="absolute -bottom-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full border-2 border-white shadow-sm" />
                 </div>
                 <div>
                   <div className="font-semibold text-white text-base">
