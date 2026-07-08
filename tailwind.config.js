@@ -2,6 +2,7 @@
 // Configuração do Tailwind CSS para o projeto Extraord1nário
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       // Paleta de cores personalizada

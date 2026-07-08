@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className="group bg-white rounded-2xl shadow-sm hover:shadow-orange-200/50 transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full"
+      className="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-orange-200/50 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-white/10 flex flex-col h-full"
     >
       {/* Imagem de Fundo que cobre a parte superior */}
       {post.featuredImage && (
@@ -117,12 +117,12 @@ const PostCard = ({ post }) => {
 
             {/* Informações do Autor */}
             <div>
-              <div className="font-medium text-gray-900 text-sm">
+              <div className="font-medium text-gray-900 dark:text-gray-100 text-sm">
                 {post.author.name}
               </div>
               <time
                 dateTime={post.publishedAt}
-                className="text-xs text-gray-500 flex items-center"
+                className="text-xs text-gray-500 dark:text-gray-400 flex items-center"
               >
                 <HiCalendar className="w-3 h-3 mr-1" />
                 {formatDate(post.publishedAt)}

@@ -8,7 +8,7 @@ import PostCard from "../components/PostCard";
 // Componente HomePage - Página inicial do blog
 const HomePage = ({ posts }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
       {/* Hero Section */}
       <Hero totalReflexoes={posts.length} />
 
@@ -16,21 +16,21 @@ const HomePage = ({ posts }) => {
       <section className="py-16 lg:py-24 relative">
         {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/70 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/80 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/70 dark:bg-orange-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/80 dark:bg-orange-500/10 rounded-full blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10">
           <header className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 dark:from-primary-900/20 dark:to-primary-900/10 dark:text-primary-200 px-4 py-2 rounded-full mb-6">
               <HiViewGrid className="w-4 h-4" />
               <span className="text-sm font-medium">Últimas Reflexões</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4 title-poppins">
+            <h2 className="text-3xl md:text-4xl font-medium text-gray-900 dark:text-gray-100 mb-4 title-poppins">
               Reflexões em Destaque
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Descubra pensamentos profundos e reflexões que inspiram mudanças
               na forma de ver o mundo
             </p>

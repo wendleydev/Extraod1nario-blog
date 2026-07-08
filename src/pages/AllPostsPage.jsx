@@ -8,7 +8,7 @@ import PostCard from "../components/PostCard";
 // Componente AllPostsPage - Página com todos os posts
 const AllPostsPage = ({ posts }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
       {/* Hero Section com Banner */}
       <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20">
         {/* Banner de Fundo */}
@@ -100,9 +100,9 @@ const AllPostsPage = ({ posts }) => {
       <main className="py-20 relative">
         {/* Background de fundo */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/40 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-50/20 rounded-full blur-2xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/30 dark:bg-orange-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/40 dark:bg-orange-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-50/20 dark:bg-orange-500/10 rounded-full blur-2xl" />
         </div>
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8">
@@ -114,16 +114,16 @@ const AllPostsPage = ({ posts }) => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-700 px-6 py-3 rounded-full mb-6">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-700 dark:from-orange-900/30 dark:to-orange-800/20 dark:text-orange-200 px-6 py-3 rounded-full mb-6">
                 <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">
                   Biblioteca de Reflexões
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 title-poppins mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 title-poppins mb-4">
                 Explore Nossa Coleção Completa
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                 Descubra pensamentos profundos, reflexões sinceras e
                 experiências que inspiram mudanças na forma de ver o mundo
               </p>
@@ -168,11 +168,11 @@ const AllPostsPage = ({ posts }) => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-center mt-16"
             >
-              <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-3xl p-8 border border-orange-200">
-                <h3 className="text-2xl font-bold text-gray-900 title-poppins mb-4">
+              <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/10 rounded-3xl p-8 border border-orange-200 dark:border-white/10">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 title-poppins mb-4">
                   Continue Explorando
                 </h3>
-                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
                   Cada reflexão é uma oportunidade de crescimento e
                   autoconhecimento. Continue explorando e descubra novas
                   perspectivas sobre a vida.

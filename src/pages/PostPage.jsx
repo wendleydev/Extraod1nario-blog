@@ -21,13 +21,13 @@ const PostPage = ({ posts }) => {
   // Se não encontrar o post, mostrar página 404
   if (!post) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-          <h2 className="text-2xl font-medium text-gray-700 mb-4">
+          <h2 className="text-2xl font-medium text-gray-700 dark:text-gray-200 mb-4">
             Post não encontrado
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             O post que você está procurando não existe.
           </p>
           <Link
@@ -51,7 +51,7 @@ const PostPage = ({ posts }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
       {/* Header do Post */}
       <motion.header
         initial={{ opacity: 0 }}
@@ -164,9 +164,9 @@ const PostPage = ({ posts }) => {
       <main className="py-20 relative">
         {/* Background de fundo */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/40 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-50/20 rounded-full blur-2xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-50/30 dark:bg-orange-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-orange-50/40 dark:bg-orange-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-50/20 dark:bg-orange-500/10 rounded-full blur-2xl" />
         </div>
 
         <div className="container-custom relative z-10">
@@ -178,9 +178,9 @@ const PostPage = ({ posts }) => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="prose prose-lg prose-primary max-w-none"
             >
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 p-8 md:p-12">
+              <div className="bg-white/80 dark:bg-gray-900/70 backdrop-blur-sm rounded-3xl shadow-xl border border-white/50 dark:border-white/10 p-8 md:p-12">
                 {/* Conteúdo do post */}
-                <div className="space-y-8 text-gray-700 leading-relaxed">
+                <div className="space-y-8 text-gray-700 dark:text-gray-200 leading-relaxed">
                   {post.slug === "ser-mulher-dia-internacional" ? (
                     // Conteúdo específico para o post sobre mulheres
                     <>
@@ -192,7 +192,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Escrevo sobre a mulher com admiração: ela caminha na
                           dúvida cheia de certezas, corre atrás das nuvens num
                           dia de sol e alcança o sol num dia de chuva. Chora de
@@ -233,12 +233,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-pink-50 to-pink-100/50 rounded-2xl p-6 border border-pink-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-pink-50 to-pink-100/50 dark:from-pink-900/40 dark:to-pink-800/40 rounded-2xl p-6 border border-pink-200/50 dark:border-pink-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-pink-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "A verdadeira força da mulher não está na
                                 ausência de medo, mas na coragem de enfrentá-lo
                                 com graça e determinação."
@@ -255,13 +255,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-pink-50 to-pink-100/50 rounded-2xl p-8 border border-pink-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-pink-50 to-pink-100/50 dark:from-pink-900/60 dark:to-pink-800/50 rounded-2xl p-8 border border-pink-200/50 dark:border-pink-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Quem observa de perto percebe: a força dela não
                             está na ausência de medo, mas na coragem de
                             enfrentá-lo com graça e determinação.
@@ -311,7 +311,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-pink-50 to-pink-100/30 rounded-2xl p-6 border border-pink-200/50"
+                            className="bg-gradient-to-br from-pink-50 to-pink-100/30 dark:from-pink-900/40 dark:to-pink-800/40 rounded-2xl p-6 border border-pink-200/50 dark:border-pink-500/60"
                           >
                             <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
@@ -325,6 +325,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Ser mulher) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-pink-50 via-white to-pink-50 border-2 border-dashed border-pink-300/70 shadow-md dark:from-pink-900/40 dark:via-gray-900 dark:to-pink-900/40 dark:border-pink-500/60">
+                          <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-pink-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu notei que a coragem não nasce apenas de um momento grandioso:
+                            ela cresce em escolhas pequenas, repetidas. Quando a mulher
+                            insiste, respira e segue, ela transforma dúvida em direção.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-pink-400 pl-4">
+                            Resiliência é memória do que já superamos.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -334,7 +357,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             Parabéns a todas as mulheres delicadas, fortes e
                             guerreiras. Que continuem inspirando, transformando
                             e iluminando o mundo com sua presença única.
@@ -430,7 +453,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Creio que no fundo somos sempre sós. Pode ser que você
                           encontre um amor, um punhado de amigos, o conforto
                           familiar. Mas ninguém nos livra dos pesos da vida. A
@@ -469,12 +492,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.9 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-6 border border-blue-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/40 dark:to-blue-800/40 rounded-2xl p-6 border border-blue-200/50 dark:border-blue-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-blue-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "A solidão não é uma punição, mas uma condição
                                 natural da alma. É no silêncio que encontramos
                                 nossa verdadeira essência."
@@ -491,13 +514,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-blue-50 to-blue-100/50 rounded-2xl p-8 border border-blue-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-blue-50 to-blue-100/50 dark:from-blue-900/60 dark:to-blue-800/50 rounded-2xl p-8 border border-blue-200/50 dark:border-blue-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             No fundo, somos sempre sós — e aceitar isso não é
                             derrota. É o começo de uma paz que nenhuma
                             companhia emprestada consegue dar.
@@ -546,7 +569,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-blue-50 to-blue-100/30 rounded-2xl p-6 border border-blue-200/50"
+                            className="bg-gradient-to-br from-blue-50 to-blue-100/30 dark:from-blue-900/40 dark:to-blue-800/40 rounded-2xl p-6 border border-blue-200/50 dark:border-blue-500/60"
                           >
                             <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
@@ -560,6 +583,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Solidão essencial) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-blue-50 via-white to-blue-50 border-2 border-dashed border-blue-300/70 shadow-md dark:from-blue-900/40 dark:via-gray-900 dark:to-blue-900/40 dark:border-blue-500/60">
+                          <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Quando eu passo alguns minutos em silêncio, meu pensamento
+                            se organiza sozinho. A solidão não “rouba” alegria: ela
+                            abre espaço para eu ouvir o que eu mesmo sinto.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-blue-400 pl-4">
+                            Às vezes, o encontro com você começa com o silêncio.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -569,7 +615,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             A solidão não é tristeza, abandono ou fracasso. É
                             simplesmente a condição natural de ser humano. E,
                             quando aceitamos isso, descobrimos uma paz interior
@@ -665,7 +711,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-purple-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Quem sabe amanhã faça sol, mas talvez até chova um
                           pouco. Talvez o vento sopre forte, talvez eu ainda
                           sinta teu gosto. Talvez eu tome um pouco de café e
@@ -703,12 +749,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl p-6 border border-purple-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 dark:from-purple-900/40 dark:to-purple-800/40 rounded-2xl p-6 border border-purple-200/50 dark:border-purple-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-purple-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-purple-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "A beleza da vida está na incerteza dos talvez,
                                 que nos mantêm esperançosos e sonhadores."
                               </p>
@@ -724,13 +770,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-purple-50 to-purple-100/50 rounded-2xl p-8 border border-purple-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-purple-50 to-purple-100/50 dark:from-purple-900/60 dark:to-purple-800/50 rounded-2xl p-8 border border-purple-200/50 dark:border-purple-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Talvez o amor seja isso, talvez seja essa coisa de
                             louco. Uma dança entre certezas e incertezas, entre
                             hoje e amanhã.
@@ -777,7 +823,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl p-6 border border-orange-200/50"
+                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60"
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
@@ -791,6 +837,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Talvez amanhã) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-orange-50 via-white to-orange-50 border-2 border-dashed border-orange-300/70 shadow-md dark:from-orange-900/40 dark:via-gray-900 dark:to-orange-900/40 dark:border-orange-500/60">
+                          <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu percebi que aceitar “talvez” diminui a ansiedade e aumenta a
+                            flexibilidade. Quando eu não exijo certeza absoluta, eu consigo
+                            agir melhor no presente, mesmo com o futuro em aberto.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-orange-400 pl-4">
+                            Talvez é ponte: liga o que passou ao que ainda pode nascer.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -800,7 +869,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             E talvez seja exatamente isso que torna a vida tão
                             bonita - não saber ao certo o que vai acontecer
                             amanhã, mas ter a coragem de continuar, de esperar,
@@ -897,7 +966,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Não me escondi e jamais desisti, mas se me afastei de
                           você num instante, foi só para que pudesse ser feliz.
                           Amar você foi a coisa mais gratificante — e também a
@@ -933,12 +1002,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-6 border border-orange-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-orange-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "O verdadeiro amor às vezes exige que façamos
                                 escolhas difíceis, colocando a felicidade do
                                 outro acima da nossa própria."
@@ -955,13 +1024,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-2xl p-8 border border-orange-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-orange-100/50 dark:from-orange-900/60 dark:to-orange-800/50 rounded-2xl p-8 border border-orange-200/50 dark:border-orange-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Infelizmente, amar é também, às vezes, ter que
                             deixar partir.
                           </p>
@@ -1006,7 +1075,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl p-6 border border-orange-200/50"
+                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60"
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
@@ -1020,6 +1089,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Deixar partir) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-orange-50 via-white to-orange-50 border-2 border-dashed border-orange-300/70 shadow-md dark:from-orange-900/40 dark:via-gray-900 dark:to-orange-900/40 dark:border-orange-500/60">
+                          <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu aprendi que “deixar partir” não é destruir o amor: é tirar
+                            o peso das mãos e devolver o tempo para o que precisa seguir
+                            seu caminho. Às vezes, amar é escolher a forma certa de não ferir.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-orange-400 pl-4">
+                            Desapego é cuidado com o que a gente não controla.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1029,7 +1121,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             E assim aprendemos que amar também é saber quando
                             deixar partir, quando dar espaço, quando permitir
                             que o outro encontre sua própria felicidade, mesmo
@@ -1125,7 +1217,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           As mulheres que mais poderão marcar a sua vida são as
                           CHATAS. Também chamadas de loucas, ciumentas,
                           bipolares, confusas, esquisitas.
@@ -1163,12 +1255,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-6 border border-orange-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-orange-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "Quem não gosta de se sentir desejado? As
                                 'chatas' demonstram interesse real e proteção."
                               </p>
@@ -1184,13 +1276,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-2xl p-8 border border-orange-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-orange-100/50 dark:from-orange-900/60 dark:to-orange-800/50 rounded-2xl p-8 border border-orange-200/50 dark:border-orange-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Porém vou te perguntar uma coisa: quem não gosta de
                             se sentir desejado?!
                           </p>
@@ -1236,7 +1328,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 rounded-2xl p-6 border border-orange-200/50"
+                            className="bg-gradient-to-br from-orange-50 to-orange-100/30 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60"
                           >
                             <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
@@ -1250,6 +1342,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Mulheres chatas) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-orange-50 via-white to-orange-50 border-2 border-dashed border-orange-300/70 shadow-md dark:from-orange-900/40 dark:via-gray-900 dark:to-orange-900/40 dark:border-orange-500/60">
+                          <h3 className="text-lg font-semibold text-orange-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu entendo o “ciúme” quando ele nasce de medo de perder. O
+                            pulo do gato é transformar essa emoção em conversa: a
+                            cobrança silenciosa estraga, mas o diálogo orienta.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-orange-400 pl-4">
+                            O cuidado fala; a insegurança grita.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1259,7 +1374,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             Então, antes de reclamar de uma mulher "chata",
                             pense: ela está ali, demonstrando que se importa,
                             que te quer, que te protege. Isso é muito mais
@@ -1355,7 +1470,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-green-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Sabe, você pode andar por aí, e dar de cara com
                           muitas, pode abraçar muitas, mas nenhuma delas vai ser
                           como ela.
@@ -1391,12 +1506,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-6 border border-green-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-green-50 to-green-100/50 dark:from-green-900/40 dark:to-green-800/40 rounded-2xl p-6 border border-green-200/50 dark:border-green-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-green-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "Valorize enquanto tem a chance. Pessoas
                                 especiais são raras e preciosas."
                               </p>
@@ -1412,13 +1527,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-green-50 to-green-100/50 rounded-2xl p-8 border border-green-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-green-50 to-green-100/50 dark:from-green-900/60 dark:to-green-800/50 rounded-2xl p-8 border border-green-200/50 dark:border-green-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             E ela foi a única que permaneceu, que te confortou.
                           </p>
                           <div className="mt-4 pt-4 border-t border-green-200/50">
@@ -1435,7 +1550,7 @@ const PostPage = ({ posts }) => {
                         difíceis? Quantas nos confortam quando precisamos?
                       </p>
 
-                      <h2 className="text-2xl font-semibold text-gray-900 title-poppins">
+                      <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 title-poppins">
                         O Valor de Quem Permanece
                       </h2>
 
@@ -1450,7 +1565,7 @@ const PostPage = ({ posts }) => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
-                        className="bg-gradient-to-br from-green-50 to-green-100/30 rounded-2xl p-6 border border-green-200/50 my-8"
+                        className="bg-gradient-to-br from-green-50 to-green-100/30 dark:from-green-900/40 dark:to-green-800/40 rounded-2xl p-6 border border-green-200/50 dark:border-green-500/60 my-8"
                       >
                         <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
                           <div className="w-2 h-2 bg-green-500 rounded-full mr-2" />
@@ -1460,6 +1575,29 @@ const PostPage = ({ posts }) => {
                           items={postCharacteristics["cuida-bem-dela"].items}
                           dotColor={postCharacteristics["cuida-bem-dela"].dotColor}
                         />
+                      </motion.div>
+
+                      {/* Curiosidade (Cuida bem dela) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-green-50 via-white to-green-50 border-2 border-dashed border-green-300/70 shadow-md dark:from-green-900/40 dark:via-gray-900 dark:to-green-900/40 dark:border-green-500/60">
+                          <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-green-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu observo que confiança não nasce do discurso: ela se
+                            constrói na repetição. Um gesto pequeno, repetido com
+                            intenção, vira segurança para quem está ao meu lado.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-green-400 pl-4">
+                            Amor consistente tem ritmo.
+                          </p>
+                        </div>
                       </motion.div>
 
                       <p>
@@ -1555,7 +1693,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Eu quero sim casar com você, morar com você, acordar
                           ao seu lado, ouvir você contar sobre o seu dia, sair
                           à noite de mãos dadas.
@@ -1591,12 +1729,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-pink-50 to-pink-100/50 rounded-2xl p-6 border border-pink-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-pink-50 to-pink-100/50 dark:from-pink-900/40 dark:to-pink-800/40 rounded-2xl p-6 border border-pink-200/50 dark:border-pink-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-pink-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "O casamento é a escolha de construir uma vida
                                 juntos, de compartilhar momentos simples e
                                 especiais."
@@ -1613,13 +1751,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-pink-50 to-pink-100/50 rounded-2xl p-8 border border-pink-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-pink-50 to-pink-100/50 dark:from-pink-900/60 dark:to-pink-800/50 rounded-2xl p-8 border border-pink-200/50 dark:border-pink-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Quero que você me cale com um beijo quando eu falar
                             demais. Quero te amar pelo resto da minha vida e
                             viver feliz ao seu lado.
@@ -1664,7 +1802,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
-                            className="bg-gradient-to-br from-pink-50 to-pink-100/30 rounded-2xl p-6 border border-pink-200/50"
+                            className="bg-gradient-to-br from-pink-50 to-pink-100/30 dark:from-pink-900/40 dark:to-pink-800/40 rounded-2xl p-6 border border-pink-200/50 dark:border-pink-500/60"
                           >
                             <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-pink-500 rounded-full mr-2" />
@@ -1678,6 +1816,29 @@ const PostPage = ({ posts }) => {
                         </div>
                       </motion.div>
 
+                      {/* Curiosidade (Eu quero casar com você) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-pink-50 via-white to-pink-50 border-2 border-dashed border-pink-300/70 shadow-md dark:from-pink-900/40 dark:via-gray-900 dark:to-pink-900/40 dark:border-pink-500/60">
+                          <h3 className="text-lg font-semibold text-pink-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-pink-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu percebo que o amor cresce quando vira rotina: pequenos combinados,
+                            presença no cotidiano e uma forma de dizer “estou aqui” sem precisar
+                            de grandes discursos.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-pink-400 pl-4">
+                            Um vínculo forte tem repetição e gentileza.
+                          </p>
+                        </div>
+                      </motion.div>
+
                       {/* Parágrafo Final */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1687,7 +1848,7 @@ const PostPage = ({ posts }) => {
                       >
                         <div className="relative">
                           <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-pink-300 rounded-full" />
-                          <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                             E é isso que torna o amor tão especial - a vontade
                             de construir uma vida juntos, de enfrentar os
                             desafios como uma equipe, de celebrar as conquistas
@@ -1783,7 +1944,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 to-red-300 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Preciso parar com os velhos hábitos, mas não me refiro
                           a hábitos como morder a boca quando fico nervoso ou
                           roer a unha quando fico com tédio.
@@ -1819,12 +1980,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-6 border border-red-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-red-50 to-red-100/50 dark:from-red-900/40 dark:to-red-800/40 rounded-2xl p-6 border border-red-200/50 dark:border-red-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-red-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-red-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "Os hábitos que destroem são os que nos impedem
                                 de viver, de amar, de ser feliz."
                               </p>
@@ -1840,13 +2001,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-red-50 to-red-100/50 rounded-2xl p-8 border border-red-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-red-50 to-red-100/50 dark:from-red-900/60 dark:to-red-800/50 rounded-2xl p-8 border border-red-200/50 dark:border-red-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Ou o simples hábito de mentir para pensarem que
                             'está tudo bem' apenas porque não quero que ninguém
                             se preocupe ou finja preocupação.
@@ -1864,7 +2025,7 @@ const PostPage = ({ posts }) => {
                         dentro da alma? Às vezes, me sinto melhor sozinho...
                       </p>
 
-                      <h2 className="text-2xl font-semibold text-gray-900 title-poppins">
+                      <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 title-poppins">
                         A Importância do Autocuidado
                       </h2>
 
@@ -1879,7 +2040,7 @@ const PostPage = ({ posts }) => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
-                        className="bg-gradient-to-br from-red-50 to-red-100/30 rounded-2xl p-6 border border-red-200/50 my-8"
+                        className="bg-gradient-to-br from-red-50 to-red-100/30 dark:from-red-900/40 dark:to-red-800/40 rounded-2xl p-6 border border-red-200/50 dark:border-red-500/60 my-8"
                       >
                         <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
                           <div className="w-2 h-2 bg-red-500 rounded-full mr-2" />
@@ -1889,6 +2050,29 @@ const PostPage = ({ posts }) => {
                           items={postCharacteristics["habitos-destruidores"].items}
                           dotColor={postCharacteristics["habitos-destruidores"].dotColor}
                         />
+                      </motion.div>
+
+                      {/* Curiosidade (Hábitos destruidores) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-red-50 via-white to-red-50 border-2 border-dashed border-red-300/70 shadow-md dark:from-red-900/40 dark:via-gray-900 dark:to-red-900/40 dark:border-red-500/60">
+                          <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-red-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu aprendi que mudar hábito é menos “força de vontade” e mais repetição com
+                            novos gatilhos. Quando eu começo pequeno e constante, a mudança fica
+                            possível de verdade.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-red-400 pl-4">
+                            Pequeno passo, efeito acumulado.
+                          </p>
+                        </div>
                       </motion.div>
 
                       <p>
@@ -1985,7 +2169,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 to-purple-400 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Adeus à inocência... Uma menina de dez anos, violentada
                           pelo tio por quatro anos, sofrendo calada todos os
                           tipos de abusos possíveis.
@@ -2021,12 +2205,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl p-6 border border-purple-200/50 shadow-lg">
+                            <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 dark:from-purple-900/40 dark:to-purple-800/40 rounded-2xl p-6 border border-purple-200/50 dark:border-purple-500/60 shadow-lg">
                               <h3 className="text-lg font-semibold text-purple-800 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-purple-600 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 "O silêncio diante da violência é cúmplice.
                                 Precisamos proteger os vulneráveis."
                               </p>
@@ -2042,13 +2226,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-purple-50 to-purple-100/50 rounded-2xl p-8 border border-purple-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-purple-50 to-purple-100/50 dark:from-purple-900/60 dark:to-purple-800/50 rounded-2xl p-8 border border-purple-200/50 dark:border-purple-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               "
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Após esse sofrimento dentro de casa, ficou a mercê
                             da justiça para autorizar um aborto, está sofrendo
                             com os traumas e agora com essa exposição toda.
@@ -2068,7 +2252,7 @@ const PostPage = ({ posts }) => {
                         criança violada?
                       </p>
 
-                      <h2 className="text-2xl font-semibold text-gray-900 title-poppins">
+                      <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 title-poppins">
                         A Hipocrisia da Sociedade
                       </h2>
 
@@ -2084,7 +2268,7 @@ const PostPage = ({ posts }) => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
-                        className="bg-gradient-to-br from-purple-50 to-purple-100/30 rounded-2xl p-6 border border-purple-200/50 my-8"
+                        className="bg-gradient-to-br from-purple-50 to-purple-100/30 dark:from-purple-900/40 dark:to-purple-800/40 rounded-2xl p-6 border border-purple-200/50 dark:border-purple-500/60 my-8"
                       >
                         <h3 className="text-lg font-semibold text-purple-800 mb-4 flex items-center">
                           <div className="w-2 h-2 bg-purple-600 rounded-full mr-2" />
@@ -2094,6 +2278,29 @@ const PostPage = ({ posts }) => {
                           items={postCharacteristics["adeus-a-inocencia"].items}
                           dotColor={postCharacteristics["adeus-a-inocencia"].dotColor}
                         />
+                      </motion.div>
+
+                      {/* Curiosidade (Adeus à inocência) */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 1.05 }}
+                        className="my-12"
+                      >
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-purple-50 via-white to-purple-50 border-2 border-dashed border-purple-300/70 shadow-md dark:from-purple-900/40 dark:via-gray-900 dark:to-purple-900/40 dark:border-purple-500/60">
+                          <h3 className="text-lg font-semibold text-purple-800 mb-4 flex items-center gap-2 title-poppins">
+                            <HiLightBulb className="w-6 h-6 text-purple-600 flex-shrink-0" />
+                            Curiosidade
+                          </h3>
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
+                            Eu observo que o silêncio coletivo só alimenta o abusador. Quando
+                            eu levo a sério a denúncia e a rede de apoio, eu ajudo a interromper
+                            um ciclo que a vítima não escolheu.
+                          </p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-purple-400 pl-4">
+                            Proteger é agir: informar, acolher e encaminhar.
+                          </p>
+                        </div>
                       </motion.div>
 
                       <p>
@@ -2194,7 +2401,7 @@ const PostPage = ({ posts }) => {
                         className="relative"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-rose-400 rounded-full" />
-                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 pl-8 italic">
+                        <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 dark:text-gray-100 pl-8 italic">
                           Em um tempo em que tudo parece correr depressa demais,
                           onde gestos viram impulso e encontros se desfazem no
                           primeiro sopro, existe um tipo de amor que caminha na
@@ -2237,12 +2444,12 @@ const PostPage = ({ posts }) => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="lg:col-span-1"
                           >
-                            <div className="bg-gradient-to-br from-orange-50 to-rose-50/80 rounded-2xl p-6 border border-orange-200/50 shadow-lg h-full">
+                            <div className="bg-gradient-to-br from-orange-50 to-rose-50/80 dark:from-orange-900/40 dark:to-rose-900/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60 shadow-lg h-full">
                               <h3 className="text-lg font-semibold text-orange-900 mb-3 flex items-center">
                                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
                                 Reflexão do Dia
                               </h3>
-                              <p className="text-sm text-gray-700 leading-relaxed">
+                              <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
                                 A conexão emocional profunda ativa no cérebro
                                 regiões ligadas ao prazer e à segurança de
                                 forma semelhante ao toque — o vínculo pode
@@ -2260,13 +2467,13 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.8, delay: 0.75 }}
                         className="my-12"
                       >
-                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-rose-50/70 rounded-2xl p-8 border border-orange-200/50 shadow-lg">
+                        <blockquote className="relative bg-gradient-to-r from-orange-50 to-rose-50/70 dark:from-orange-900/60 dark:to-rose-900/50 rounded-2xl p-8 border border-orange-200/50 dark:border-orange-500/70 shadow-lg">
                           <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-orange-500 to-rose-500 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg font-bold">
                               &quot;
                             </span>
                           </div>
-                          <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed font-medium pl-4">
+                          <p className="text-xl md:text-2xl italic text-gray-700 dark:text-gray-100 leading-relaxed font-medium pl-4">
                             Eu te reconheço, mesmo antes de te ter nos braços.
                           </p>
                           <div className="mt-4 pt-4 border-t border-orange-200/50">
@@ -2316,7 +2523,7 @@ const PostPage = ({ posts }) => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 1 }}
-                            className="bg-gradient-to-br from-orange-50 to-amber-50/80 rounded-2xl p-6 border border-orange-200/50"
+                            className="bg-gradient-to-br from-orange-50 to-amber-50/80 dark:from-orange-900/40 dark:to-amber-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60"
                           >
                             <h3 className="text-lg font-semibold text-orange-900 mb-4 flex items-center">
                               <div className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
@@ -2337,19 +2544,19 @@ const PostPage = ({ posts }) => {
                         transition={{ duration: 0.6, delay: 1.15 }}
                         className="my-12"
                       >
-                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-amber-50 via-white to-rose-50 border-2 border-dashed border-amber-300/70 shadow-md">
+                        <div className="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-amber-50 via-white to-rose-50 dark:from-amber-900/40 dark:via-gray-900 dark:to-rose-900/40 border-2 border-dashed border-amber-300/70 dark:border-amber-500/60 shadow-md">
                           <h3 className="text-lg font-semibold text-amber-900 mb-4 flex items-center gap-2 title-poppins">
                             <HiLightBulb className="w-6 h-6 text-amber-600 flex-shrink-0" />
                             Curiosidade
                           </h3>
-                          <p className="text-gray-700 leading-relaxed mb-4">
+                          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
                             Estudos em psicologia do relacionamento mostram que
                             casais que constroem amizade e revelação emocional
                             antes da intensidade física tendem a relatar maior
                             satisfação e estabilidade — o vínculo prepara o
                             terreno para a proximidade com mais segurança.
                           </p>
-                          <p className="text-sm text-gray-600 leading-relaxed italic border-l-4 border-amber-400 pl-4">
+                          <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed italic border-l-4 border-amber-400 pl-4">
                             Platão já falava em almas que se reconhecem: às
                             vezes o encontro verdadeiro acontece primeiro por
                             dentro.
@@ -2369,7 +2576,7 @@ const PostPage = ({ posts }) => {
                         className="relative my-10"
                       >
                         <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-rose-400 rounded-full" />
-                        <p className="text-lg leading-relaxed text-gray-700 pl-8">
+                        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200 pl-8">
                           Ele ensina que intimidade nasce da escuta e da
                           construção lenta. Esperar pelo toque não é fraqueza:
                           é maturidade. É carinho em estado puro.
@@ -2448,8 +2655,8 @@ const PostPage = ({ posts }) => {
               className="mt-12"
             >
               {post.tags.length > 0 && (
-                <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 rounded-2xl p-6 border border-orange-200/50">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 title-poppins flex items-center">
+                <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 dark:from-orange-900/40 dark:to-orange-800/40 rounded-2xl p-6 border border-orange-200/50 dark:border-orange-500/60">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 title-poppins flex items-center">
                     <HiTag className="w-5 h-5 mr-2 text-orange-600" />
                     Tags Relacionadas
                   </h3>
@@ -2457,7 +2664,7 @@ const PostPage = ({ posts }) => {
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-4 py-2 bg-white/80 backdrop-blur-sm text-orange-700 text-sm rounded-xl border border-orange-200/50 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200 shadow-sm"
+                        className="px-4 py-2 bg-white/80 backdrop-blur-sm text-orange-700 dark:bg-white/5 dark:text-orange-200 text-sm rounded-xl border border-orange-200/50 dark:border-orange-500/60 hover:bg-orange-100 hover:border-orange-300 dark:hover:bg-orange-900/30 dark:hover:border-orange-500/70 transition-all duration-200 shadow-sm"
                       >
                         #{tag}
                       </span>

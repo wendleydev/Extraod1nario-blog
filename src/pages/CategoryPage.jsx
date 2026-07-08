@@ -9,12 +9,12 @@ const CategoryPage = ({ posts, categories }) => {
 
   if (!currentCategory) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800 flex items-center justify-center px-4">
         <div className="text-center max-w-xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 title-poppins mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 title-poppins mb-4">
             Categoria não encontrada
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             Essa categoria não existe ou ainda não possui publicações.
           </p>
           <Link
@@ -32,7 +32,7 @@ const CategoryPage = ({ posts, categories }) => {
   const filteredPosts = posts.filter((post) => post.category === currentCategory.name);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800 py-16">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,15 +48,15 @@ const CategoryPage = ({ posts, categories }) => {
             <span>Voltar para todos os posts</span>
           </Link>
 
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
-            <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full mb-4">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 dark:bg-gray-900/60 dark:border-white/10">
+            <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-200 px-4 py-2 rounded-full mb-4">
               <HiTag className="w-4 h-4" />
               <span className="text-sm font-medium">Categoria</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 title-poppins mb-2">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 title-poppins mb-2">
               {currentCategory.icon} {currentCategory.name}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               {filteredPosts.length}{" "}
               {filteredPosts.length === 1 ? "publicação" : "publicações"}
             </p>

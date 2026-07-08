@@ -3,32 +3,32 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-gray-800 py-16">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-12"
+          className="max-w-3xl mx-auto bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-12 dark:bg-gray-900/60 dark:border-white/10"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 title-poppins mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 title-poppins mb-6">
             Sobre o Extraord1nário
           </h1>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4">
             O Extraord1nário nasceu como um espaço para transformar vivências em
             palavras. Aqui, cada texto busca provocar reflexão, acolher
             sentimentos e abrir novos caminhos para enxergar a vida.
           </p>
 
-          <p className="text-gray-700 leading-relaxed mb-8">
+          <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-8">
             Entre temas pessoais e sociais, a proposta do blog é simples:
             compartilhar pensamentos honestos, com sensibilidade e verdade.
           </p>
 
-          <div className="border-t border-gray-100 pt-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">Autor</h2>
-            <p className="text-gray-700 mb-4">
+          <div className="border-t border-gray-100 dark:border-white/10 pt-6">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Autor</h2>
+            <p className="text-gray-700 dark:text-gray-200 mb-4">
               <strong>Wendley Santos</strong> - escritor e pensador apaixonado
               por reflexões profundas sobre a vida.
             </p>
